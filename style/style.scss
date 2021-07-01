@@ -1,0 +1,342 @@
+@import "classes.scss";
+
+.header {
+    height: 100vh;
+
+    nav {
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        padding: .7rem .5rem;
+        z-index: 10;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        font-size: 42px;
+        margin-bottom: .5em;
+        color: #fff;
+        span {
+            color: #f6994b;
+        }
+    }
+
+    &__subtitle {
+        color: #fff;
+    }
+
+    &__banner {
+        background: url(../images/main-banner.d6b8dd91.jpg);
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: .5;
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            p {
+                font-size: 20px;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+main {
+
+    .subscribe-box {
+        padding: 50px 0;
+        background: #f6994b;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h4 {
+                font-size: 24px;
+                color: #fff;
+                width: 730px;
+            }
+            form {
+                width: 350px;
+                display: flex;
+                height: 50px;
+                input {
+                    width: 250px;
+                    height: 100%;
+                    background-color: transparent;
+                    color: #fff;
+                    box-shadow: none;
+                    outline: none;
+                    border-color: #fff;
+                    border-radius: 25px;
+                    border: 1px solid #fff;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                button {
+                    border: none;
+                    border-top-right-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                    height: 100%;
+                    padding: 10px 21px;
+                    font-size: 32px;
+                    color: #f6994b;
+                }
+            }
+        }
+    }
+
+    .welcome-box {
+        padding: 100px 0;
+
+        &__title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        &__subtitle {
+            font-size: 17px;
+            max-width: 535px;
+            margin: 0 auto;
+            color: #999;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .list {
+            &__item {
+                max-width: 380px;
+            }
+        }
+
+    }
+
+    .about-box {
+        padding: 100px 0;
+        background: #f9f9f9;
+
+        &__image, &__slider {
+            padding: 0 15px;
+            width: 100%;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .about {
+            margin-right: 10px;
+
+            > div {
+                width: 540px;
+            }
+
+            &__title {
+                font-size: 30px;
+            }
+
+            &__subtitle {
+                font-size: 18px;
+                text-transform: capitalize;
+                font-weight: 400;
+                margin: 0 0 15px;
+                span {
+                    color: #f6994b;
+                }
+            }
+
+            p {
+                margin: 0 0 20px;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.5;
+                color: #999;
+                margin-bottom: 20px;
+            }
+
+            .progress {
+                margin-top: 1.5rem;
+                &__item {
+                    margin-bottom: 1rem;
+                }
+
+                &__head {
+                    display: flex;
+                    justify-content: space-between;
+                    h6 {
+                        font-size: 16px;
+                    }
+                }
+            
+                &__body {
+                    background: #e9ecef;
+                    border-radius: 25px;
+                    height: .7rem;
+                    overflow: hidden;
+            
+                    @keyframes animate-stripes {
+                        0% {
+                            background-position: 0 0;
+                        }
+                    
+                        100% {
+                            background-position: 60px 0;
+                        }
+                    }
+                
+                    .progress-bar {
+                        width: 95%;
+                        height: 100%;
+                        background: #f6994b;
+                        &--92 {
+                            width: 92%;
+                        }
+                    }
+                    
+                    .stripes {
+                        background-image: linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);
+                        background-size: 1rem 1rem;
+                    }
+                    
+                    .stripes.animated {
+                      animation: animate-stripes 3s linear infinite;
+                    }
+                    
+                    
+                    .stripes.reverse {
+                      animation-direction: reverse;
+                    }
+                }
+
+            }
+
+            .about-list {
+                display: flex;
+                flex-wrap: wrap;
+
+                &__item {
+                    width: 100%;
+                    max-width: 33.333333%;
+                    background: #fff;
+
+                    &:nth-of-type(1) {
+                        border-bottom: 1px solid #eee;
+                    }
+
+                    &:nth-of-type(2) {
+                        border-bottom: 1px solid #eee;
+                        border-right: 1px solid #eee;
+                        border-left: 1px solid #eee;
+                    }
+
+                    &:nth-of-type(3) {
+                        border-bottom: 1px solid #eee;
+                    }
+
+                    &:nth-of-type(5) {
+                        border-right: 1px solid #eee;
+                        border-left: 1px solid #eee;
+                    }
+
+                    div {
+                        padding: 15px;
+                        text-align: center;
+                        i {
+                            font-size: 35px;
+                        }
+                        h5 {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ourservice {
+        padding: 100px 0;
+
+        &__title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        &__subtitle {
+            font-size: 17px;
+            max-width: 535px;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-weight: 400;
+            text-align: center;
+            color: #999;
+        }
+
+        .service {
+            display: flex;
+            margin-top: 50px;
+            &__item {
+                width: 100%;
+                max-width: 25%;
+                padding: 0 15px;
+                div {
+                    margin: 15px 0;
+                    transition: .5s;
+                    box-shadow: 7px 5px 30px rgba(72, 73, 121, .2);
+                    padding: 25px;
+                    background: #fff;
+                    position: relative;
+                    transition: .4s;
+                    i {
+                        font-size: 50px;
+                        color: #999;
+                    }
+                    h4 {
+                        font-size: 20px;
+                        margin: 15px 0 10px 0;
+                    }
+                    p {
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 1.8;
+                        color: #999;
+                        margin-bottom: 0;
+                    }
+
+                    &:hover {
+                        margin-top: -2px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

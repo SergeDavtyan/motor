@@ -21,6 +21,10 @@ button {
     cursor: pointer;
 }
 
+input {
+    outline: none;
+}
+
 h1, h2, h4, h5 {
     font-weight: 700;
     line-height: 1.5;
@@ -39,6 +43,10 @@ h1, h2, h4, h5 {
 .logo {
     img {
         width: 145px;
+        display: none;
+        &.active {
+            display: block;
+        }
     }
 }
 
@@ -49,7 +57,18 @@ h1, h2, h4, h5 {
             color: #fff;
             padding-right: .8rem;
             padding-left: .8rem;
-            padding: .5rem 1rem;
+            padding: .3rem 1rem;
+            font-family: "Roboto",sans-serif;
+            transition: all .3s;
+            &:hover {
+                color: #f6994b;
+            }
+            &.select {
+                color: #f6994b;
+            }
+            &.active {
+                color: #000;
+            }
         }
     }
 }
@@ -86,3 +105,22 @@ h1, h2, h4, h5 {
 
 }
 
+.title-box {
+    margin-bottom: 50px;
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 17px;
+        max-width: 535px;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-weight: 400;
+        text-align: center;
+        color: #999;
+    }
+
+}

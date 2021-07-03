@@ -1,0 +1,21 @@
+@mixin device {
+
+    @media only screen and (max-width: 1200px) {
+
+        main {
+            .about-box {
+
+                &__image, &__slider {
+                    max-width: 480px;
+                }
+                // .about {
+                //     > div {
+                //         width: 480px;
+                //     }
+                // }
+            }
+        }
+
+    }
+
+}

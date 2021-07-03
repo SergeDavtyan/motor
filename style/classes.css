@@ -22,6 +22,10 @@ button {
   cursor: pointer;
 }
 
+input {
+  outline: none;
+}
+
 h1, h2, h4, h5 {
   font-weight: 700;
   line-height: 1.5;
@@ -39,6 +43,11 @@ h1, h2, h4, h5 {
 
 .logo img {
   width: 145px;
+  display: none;
+}
+
+.logo img.active {
+  display: block;
 }
 
 .menu {
@@ -51,7 +60,22 @@ h1, h2, h4, h5 {
   color: #fff;
   padding-right: .8rem;
   padding-left: .8rem;
-  padding: .5rem 1rem;
+  padding: .3rem 1rem;
+  font-family: "Roboto",sans-serif;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.menu__item a:hover {
+  color: #f6994b;
+}
+
+.menu__item a.select {
+  color: #f6994b;
+}
+
+.menu__item a.active {
+  color: #000;
 }
 
 .list {
@@ -91,5 +115,25 @@ h1, h2, h4, h5 {
   line-height: 1.8;
   color: #999;
   margin-bottom: 0;
+}
+
+.title-box {
+  margin-bottom: 50px;
+}
+
+.title-box h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.title-box p {
+  font-size: 17px;
+  max-width: 535px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  color: #999;
 }
 /*# sourceMappingURL=classes.css.map */

@@ -16,10 +16,18 @@ $('.feedback-carousel').owlCarousel({
     dots: true,
     responsive: {
         0: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        1000: {
             items: 3
         }
     }
 })
+
+
 
 let nav = document.querySelector("nav");
 let logo_default = document.querySelector(".logo-default");
@@ -46,4 +54,18 @@ window.addEventListener("scroll", () => {
             menu_items[i].classList.remove("active");
         }
     }
+})
+
+
+let burger = document.querySelector(".burger");
+let burger_menu = document.querySelector(".burger-menu");
+
+
+
+burger_menu.addEventListener("click", () => {
+    burger_menu.classList.remove("active");
+})
+
+burger.addEventListener("click", () => {
+    burger_menu.classList.toggle("active");
 })

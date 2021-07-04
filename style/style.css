@@ -216,6 +216,8 @@ h1, h2, h4, h5 {
   background: #28a745;
   -webkit-animation: shadow-pulse 3s infinite;
           animation: shadow-pulse 3s infinite;
+  cursor: pointer;
+  display: block;
 }
 
 .modal.active {

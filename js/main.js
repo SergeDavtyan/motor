@@ -78,7 +78,6 @@ burger.addEventListener("click", () => {
 
 document.addEventListener("click", (e) => {
     if (e.target.className !== burger_menu.className && e.target.className !== burger.className && e.target.className !== burger_item.className) {
-        console.log("work")
         burger_menu.classList.remove("active");
     }
 })
@@ -88,15 +87,17 @@ document.addEventListener("click", (e) => {
 
 let call_pulse = document.querySelector(".call-pulse");
 let modal = document.querySelector(".modal");
+let call_input = document.querySelector(".call-input");
+let call_btn = document.querySelector(".call-btn");
 
 call_pulse.addEventListener("click", () => {
     modal.classList.add("active");
 })
 
-modal.addEventListener("click", () => {
-    modal.classList.remove("active");
-})
+modal.addEventListener("click", (e) => {
 
-// document.addEventListener("click", (e) => {
-//     console.log(e.target)
-// })
+    if (e.target.className !== call_input.className && e.target.className !== call_btn.className) {
+        modal.classList.remove("active");
+    }
+
+})

@@ -298,6 +298,44 @@ main {
         }
     }
 
+    .cars {
+        background: #f9f9f9;
+        padding: 100px 0;
+        .container {
+            ul {
+                padding-top: 40px;
+                max-height: 500px;
+                overflow-y: scroll;
+                padding-bottom: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    width: 100%;
+                    max-width: 25%;
+                    padding: 0 15px;
+                    .inner {
+                        width: 100%;
+                        background: white;
+                        border: 1px #bebebe73 solid;
+                        border-radius: 5px;
+                        text-align: center;
+                        margin-bottom: 9px;
+                        min-height: 60px;
+                        cursor: pointer;
+                        img {
+                            margin-top: 10px;
+                            width: 100%;
+                            max-width: 60px;
+                            max-height: 40px;
+                            margin-bottom: 10px;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .ourservice {
         padding: 100px 0;
 

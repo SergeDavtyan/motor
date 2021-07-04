@@ -438,6 +438,15 @@
                     }
                 }
             }
+            .cars {
+                .container {
+                    ul {
+                        li {
+                            max-width: 50%;
+                        }
+                    }
+                }
+            }
             .portfolio {
                 ul {
                     li {
@@ -583,6 +592,17 @@
                     padding: 0;
                 }
 
+            }
+            .cars {
+                .container {
+                    ul {
+                        li {
+                            .inner {
+                                height: 60px;
+                            }
+                        }
+                    }
+                }
             }
             .ourservice {
                 padding: 65px 0;

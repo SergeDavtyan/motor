@@ -3,7 +3,9 @@ html {
     font-size: 16px;
     line-height: 1.5;
     color: #545454;
+    scroll-behavior: smooth;
 }
+
 
 body, * {
     margin: 0;
@@ -181,6 +183,7 @@ h1, h2, h4, h5 {
 
 
 .modal {
+    display: none;
     &.active {
         position: fixed;
         width: 100%;
@@ -250,3 +253,22 @@ h1, h2, h4, h5 {
         }   
     }
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #CDCDCD; 
+}
+
+/* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: #CDCDCD; 
+// }

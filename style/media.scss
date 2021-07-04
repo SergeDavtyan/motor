@@ -309,6 +309,17 @@
 
     @media only screen and (max-width: 768px) {
 
+        .addres {
+            flex-direction: column;
+            li {
+                max-width: 100%;
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
         .container {
             max-width: 540px;
         }
@@ -373,6 +384,12 @@
                 &:nth-of-type(2) {
                     width: 100%;
                 }
+            }
+        }
+
+        .header {
+            nav {
+                top: 150px;
             }
         }
 
@@ -459,11 +476,25 @@
                     }
                 }
             }
+            .privacy {
+                .container {
+                    flex-direction: column;
+                }
+            }
         }
 
     }
 
     @media only screen and (max-width: 576px) {
+
+        .addres {
+            li {
+                font-size: 14px;
+                i {
+                    font-size: 28px;
+                }
+            }
+        }
 
         .container {
             max-width: 100%;

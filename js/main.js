@@ -36,7 +36,7 @@ let menu_items = document.querySelectorAll(".menu__item a");
 
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 10) {
         logo_default.classList.remove("active");
         logo_black.classList.add("active");
         nav.classList.add("active");

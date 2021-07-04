@@ -137,6 +137,31 @@ h1, h2, h4, h5 {
   color: #999;
 }
 
+.addres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+}
+
+.addres li {
+  max-width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 7px;
+}
+
+.addres li i {
+  font-size: 32px;
+  margin-right: 15px;
+  color: #f6994b;
+}
+
+.addres li a {
+  font-weight: 700;
+}
+
 .header {
   height: 100vh;
 }
@@ -145,7 +170,7 @@ h1, h2, h4, h5 {
   position: fixed;
   width: 100%;
   max-width: 100%;
-  top: 0;
+  top: 110px;
   left: 0;
   padding: .7rem .5rem;
   z-index: 10;
@@ -169,6 +194,7 @@ h1, h2, h4, h5 {
           box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   -webkit-animation: fadeInDown ease .5s;
           animation: fadeInDown ease .5s;
+  top: 0;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -1205,6 +1231,10 @@ footer .contact .contact-us .contact-us-r div input {
   border-radius: .25rem;
 }
 
+footer .contact .contact-us .contact-us-r div input:first-child {
+  margin-right: 15px;
+}
+
 footer .contact .contact-us .contact-us-r textarea {
   width: 100%;
   padding: .375rem .75rem;
@@ -1235,6 +1265,55 @@ footer .contact .contact-us .contact-us-r button:hover {
   color: #f6994b;
   background: #fff;
   border: 1px solid #f6994b;
+}
+
+footer .privacy {
+  padding: 25px 0;
+  background: #000;
+}
+
+footer .privacy .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .privacy p {
+  font-size: 15px;
+  color: #fff;
+}
+
+footer .privacy ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .privacy ul li a {
+  color: #fff;
+  padding: .75rem 1.25rem;
+}
+
+footer .privacy ul li:last-child a {
+  position: relative;
+}
+
+footer .privacy ul li:last-child a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #fff;
+  width: 2px;
+  height: 15px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1434,6 +1513,19 @@ footer .contact .contact-us .contact-us-r button:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .addres {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .addres li {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .addres li:last-child {
+    margin-bottom: 0;
+  }
   .container {
     max-width: 540px;
   }
@@ -1506,6 +1598,9 @@ footer .contact .contact-us .contact-us-r button:hover {
   .burger div:nth-of-type(2) {
     width: 100%;
   }
+  .header nav {
+    top: 150px;
+  }
   main .subscribe-box .container h4 {
     font-size: 18px;
     text-align: inherit;
@@ -1566,9 +1661,21 @@ footer .contact .contact-us .contact-us-r button:hover {
   footer .contact .contact-box__item:last-child {
     margin-bottom: 0;
   }
+  footer .privacy .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 576px) {
+  .addres li {
+    font-size: 14px;
+  }
+  .addres li i {
+    font-size: 28px;
+  }
   .container {
     max-width: 100%;
   }

@@ -481,6 +481,9 @@
         }
 
         main {
+            .welcome-box, .expert, .princing, .news, .workwithus {
+                padding: 65px 0;
+            }
             .subscribe-box {
                 .container {
                     h4 {
@@ -489,6 +492,7 @@
                 }
             }
             .about-box {
+                padding: 65px 0;
 
                 .about {
                     margin-right: 0;
@@ -527,6 +531,7 @@
 
             }
             .ourservice {
+                padding: 65px 0;
                 .service {
                     flex-direction: column;
                     margin: 0 -15px;
@@ -536,6 +541,7 @@
                 }
             }
             .expert-team {
+                padding: 65px 0;
                 .team {
                     flex-direction: column;
                     margin: 0 -15px;
@@ -545,6 +551,7 @@
                 }
             }
             .portfolio {
+                padding: 65px 0;
                 ul {
                     li {
                         max-width: 100%;
@@ -552,6 +559,7 @@
                 }
             }
             .marketing {
+                padding: 65px 0;
                 &__image, &__content {
                     padding: 0;
                 }

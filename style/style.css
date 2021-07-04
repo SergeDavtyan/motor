@@ -1581,8 +1581,14 @@ footer .contact .contact-us .contact-us-r button:hover {
   .header__subtitle {
     font-size: 14px;
   }
+  main .welcome-box, main .expert, main .princing, main .news, main .workwithus {
+    padding: 65px 0;
+  }
   main .subscribe-box .container h4 {
     font-size: 17px;
+  }
+  main .about-box {
+    padding: 65px 0;
   }
   main .about-box .about {
     margin-right: 0;
@@ -1613,6 +1619,9 @@ footer .contact .contact-us .contact-us-r button:hover {
   main .about-box__image, main .about-box__slider {
     padding: 0;
   }
+  main .ourservice {
+    padding: 65px 0;
+  }
   main .ourservice .service {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1622,6 +1631,9 @@ footer .contact .contact-us .contact-us-r button:hover {
   }
   main .ourservice .service__item {
     max-width: 100%;
+  }
+  main .expert-team {
+    padding: 65px 0;
   }
   main .expert-team .team {
     -webkit-box-orient: vertical;
@@ -1633,8 +1645,14 @@ footer .contact .contact-us .contact-us-r button:hover {
   main .expert-team .team .team-box {
     max-width: 100%;
   }
+  main .portfolio {
+    padding: 65px 0;
+  }
   main .portfolio ul li {
     max-width: 100%;
+  }
+  main .marketing {
+    padding: 65px 0;
   }
   main .marketing__image, main .marketing__content {
     padding: 0;

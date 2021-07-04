@@ -1781,8 +1781,23 @@ footer .privacy ul li:last-child a:before {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  footer .contact .contact-us .contact-us-r div input {
+    max-width: 100%;
+  }
   footer .contact .contact-us .contact-us-r div input:first-child {
     margin-bottom: 1rem;
+  }
+  footer .privacy p {
+    font-size: 13px;
+  }
+  footer .privacy ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .privacy ul li a {
+    font-size: 14px;
+    padding: 0.60rem 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

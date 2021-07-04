@@ -624,10 +624,26 @@
                         div {
                             flex-direction: column;
                             input {
+                                max-width: 100%;
                                 &:first-child {
                                     margin-bottom: 1rem;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+            .privacy {
+                
+                p {
+                    font-size: 13px;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        a {
+                            font-size: 14px;
+                            padding: 0.60rem 1rem;
                         }
                     }
                 }

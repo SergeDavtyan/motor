@@ -124,3 +124,30 @@ h1, h2, h4, h5 {
     }
 
 }
+
+@keyframes shadow-pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(40, 167, 69, .5);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+
+
+.call-pulse {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    background: #28a745;
+    animation: shadow-pulse 3s infinite;
+}

@@ -128,6 +128,7 @@ h1, h2, h4, h5 {
 .addres {
     display: flex;
     padding: 20px 0;
+    z-index: 100;
     li {
         max-width: 210px;
         display: flex;

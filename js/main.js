@@ -29,6 +29,9 @@ $('.feedback-carousel').owlCarousel({
 
 
 
+
+// ------ Navbar fix
+
 let nav = document.querySelector("nav");
 let logo_default = document.querySelector(".logo-default");
 let logo_black = document.querySelector(".logo-black");
@@ -57,7 +60,10 @@ window.addEventListener("scroll", () => {
 })
 
 
+// ---- Burger Menu
+
 let burger = document.querySelector(".burger");
+let burger_item = document.querySelector(".burger-item");
 let burger_menu = document.querySelector(".burger-menu");
 
 
@@ -69,3 +75,28 @@ burger_menu.addEventListener("click", () => {
 burger.addEventListener("click", () => {
     burger_menu.classList.toggle("active");
 })
+
+document.addEventListener("click", (e) => {
+    if (e.target.className !== burger_menu.className && e.target.className !== burger.className && e.target.className !== burger_item.className) {
+        console.log("work")
+        burger_menu.classList.remove("active");
+    }
+})
+
+
+// ----- Modal
+
+let call_pulse = document.querySelector(".call-pulse");
+let modal = document.querySelector(".modal");
+
+call_pulse.addEventListener("click", () => {
+    modal.classList.add("active");
+})
+
+modal.addEventListener("click", () => {
+    modal.classList.remove("active");
+})
+
+// document.addEventListener("click", (e) => {
+//     console.log(e.target)
+// })

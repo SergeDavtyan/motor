@@ -320,6 +320,29 @@
             }
         }
 
+        .modal {
+            &.active {
+                .call {
+                    max-width: 320px;
+                    h5 {
+                        font-size: 18px;
+                    }
+                    form {
+                        input {
+                            height: 40px;
+                        }
+                        p {
+                            font-size: 10px;
+                        }
+                        button {
+                            padding: 8px 23px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
         .container {
             max-width: 540px;
         }

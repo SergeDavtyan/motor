@@ -145,15 +145,20 @@ h1, h2, h4, h5 {
     }
 }
 
-@keyframes shadow-pulse
-{
-  0% {
-    box-shadow: 0 0 0 0px rgba(40, 167, 69, .5);
-  }
-  100% {
-    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-  }
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(40, 167, 69, .5);
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+        transform: translateY(0);
+    }
 }
+
 
 
 
@@ -170,4 +175,76 @@ h1, h2, h4, h5 {
     right: 20px;
     background: #28a745;
     animation: shadow-pulse 3s infinite;
+}
+
+
+.modal {
+    &.active {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .call {
+            border-radius: .3rem;
+            border: 1px solid rgba(0,0,0,.2);
+            background: #fff;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            h5 {
+                font-size: 22px;
+                padding: 1rem;
+                border-bottom: 1px solid #e9ecef;
+            }
+            form {
+                padding: 1rem;
+                input {
+                    height: 55px;
+                    width: 100%;
+                    padding: .375rem .75rem;
+                    border: 1px solid #ced4da;
+                    border-radius: .25rem;
+                }
+                p {
+                    margin-top: .25rem;
+                    font-size: 12px;
+                }
+                button {
+                    font-weight: 700;
+                    font-size: 15px;
+                    border: none;
+                    padding: 10px 33px;
+                    line-height: 1.5;
+                    text-transform: capitalize;
+                    border-radius: 50px;
+                    letter-spacing: .5px;
+                    color: #fff;
+                    background: #f6994b;
+                    border: 1px solid #f6994b;
+                    transition: all .3s;
+                    margin-top: 1rem;
+                    &:hover {
+                        color: #f6994b;
+                        background: #fff;
+                    }
+                }
+            }
+            span {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 0px 7px;
+                cursor: pointer;
+                color: #999;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }   
+    }
 }

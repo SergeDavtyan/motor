@@ -219,10 +219,12 @@ h1, h2, h4, h5 {
           animation: shadow-pulse 3s infinite;
   cursor: pointer;
   display: block;
+  z-index: 100;
 }
 
 .modal {
   display: none;
+  z-index: 99;
 }
 
 .modal.active {

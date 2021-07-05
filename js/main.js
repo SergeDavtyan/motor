@@ -101,3 +101,28 @@ modal.addEventListener("click", (e) => {
     }
 
 })
+
+
+// ---- Input Number
+
+let call_val = true;
+const Number_Only = evt => {
+    let ch = String.fromCharCode(evt.which);
+
+    if (!(/[0-9]/.test(ch))) {
+        evt.preventDefault();
+    }
+}
+
+
+call_input.addEventListener("input", () => {
+
+    if (call_val) {
+        call_input.value = '+7' + call_input.value
+    }
+    call_val = false
+    if (call_input.value.length == 0) {
+        call_val = true
+    }
+
+})

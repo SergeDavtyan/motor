@@ -51,6 +51,27 @@ h1, h2, h4, h5 {
   display: block;
 }
 
+.call-btn {
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  padding: 10px 33px;
+  line-height: 1.5;
+  text-transform: capitalize;
+  border-radius: 50px;
+  letter-spacing: .5px;
+  color: #fff;
+  background: #f6994b;
+  border: 1px solid #f6994b;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.call-btn:hover {
+  color: #f6994b;
+  background: #fff;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +163,12 @@ h1, h2, h4, h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px 0;
   z-index: 100;
 }
@@ -163,6 +190,10 @@ h1, h2, h4, h5 {
 .addres li a {
   font-weight: 700;
   color: #000;
+}
+
+.addres li button {
+  height: 45px;
 }
 
 @-webkit-keyframes shadow-pulse {
@@ -277,28 +308,6 @@ h1, h2, h4, h5 {
   font-size: 12px;
 }
 
-.modal.active .call form button {
-  font-weight: 700;
-  font-size: 15px;
-  border: none;
-  padding: 10px 33px;
-  line-height: 1.5;
-  text-transform: capitalize;
-  border-radius: 50px;
-  letter-spacing: .5px;
-  color: #fff;
-  background: #f6994b;
-  border: 1px solid #f6994b;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  margin-top: 1rem;
-}
-
-.modal.active .call form button:hover {
-  color: #f6994b;
-  background: #fff;
-}
-
 .modal.active .call span {
   position: absolute;
   top: 10px;
@@ -310,6 +319,10 @@ h1, h2, h4, h5 {
 
 .modal.active .call span:hover {
   color: #000;
+}
+
+.modal.active .call .call-btn {
+  margin-top: 1rem;
 }
 
 ::-webkit-scrollbar {
@@ -1727,6 +1740,9 @@ footer .privacy ul li:last-child a:before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .addres li {
     max-width: 100%;
@@ -1824,7 +1840,7 @@ footer .privacy ul li:last-child a:before {
     width: 100%;
   }
   .header nav {
-    top: 150px;
+    top: 240px;
   }
   main .subscribe-box .container h4 {
     font-size: 18px;

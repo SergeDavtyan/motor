@@ -85,14 +85,16 @@ document.addEventListener("click", (e) => {
 
 // ----- Modal
 
-let call_pulse = document.querySelector(".call-pulse");
+let call_back = document.querySelectorAll(".call-back");
 let modal = document.querySelector(".modal");
 let call_input = document.querySelector(".call-input");
 let call_btn = document.querySelector(".call-btn");
 
-call_pulse.addEventListener("click", () => {
-    modal.classList.add("active");
-})
+for (let i = 0; i < call_back.length; i++) {
+    call_back[i].addEventListener("click", () => {
+        modal.classList.add("active");
+    })
+}
 
 modal.addEventListener("click", (e) => {
 
